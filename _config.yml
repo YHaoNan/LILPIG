@@ -74,10 +74,14 @@ pagination_dir: page
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: inside
-
+#theme: landscape
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
   repo: https://github.com/YHaoNan/LILPIG.git
   branch: master
+mathjax:
+  enable: true
+  per_page: true
+  cdn: https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML

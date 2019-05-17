@@ -30,7 +30,11 @@ profile:
   # Avatar URL, email address will be used for gravatar(https://en.gravatar.com) avatar if not specified.
   avatar: http://prgs9av8q.bkt.clouddn.com/3157f860f0db1818.jpg
 
-  bio: 小虎BEER
+  bio: |
+    深爱的人
+    你会如何过余生
+    是混沌或虔诚
+    为谁展露天真
 categories: /categories
 tags: /tags
 
@@ -89,10 +93,10 @@ page:
   # toc: false
 
   # Display reward, default to `false`
-  # reward: true
+  reward: true
 
   # Display copyright notice, default to `false`
-  # copyright: true
+  copyright: true
 
 
 # Post
@@ -103,10 +107,10 @@ post:
   # toc: false
 
   # Display reward, default to `false`
-  # reward: true
+  reward: true
 
   # Display copyright notice, default to `false`
-  # copyright: true
+  copyright: true
 
 # Archive
 archive:
@@ -292,7 +296,19 @@ pwa:
 # Run the following command in the root directory of Hexo (not `themes/inside`):
 # ```bash
 # npm install babel-core babel-preset-env html-minifier uglify-js --save
-# ```
-plugins:
+# ``
+# `
+#
+
+plugins: 
+  - position: post
+    template: |
+      <script>
+       window.MathJax && MathJax.Hub && MathJax.Hub.Queue(['Typeset', MathJax.Hub, document.querySelector('main')]);
+      </script>
+    mathjax: true
+
+#- hexo-renderer-mathjax
+    
   # - position:
   #   template:
