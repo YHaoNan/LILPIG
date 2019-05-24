@@ -31,10 +31,7 @@ profile:
   avatar: http://prgs9av8q.bkt.clouddn.com/3157f860f0db1818.jpg
 
   bio: |
-    深爱的人
-    你会如何过余生
-    是混沌或虔诚
-    为谁展露天真
+        一个小虎BEER
 categories: /categories
 tags: /tags
 
@@ -43,7 +40,8 @@ menu:
   Home: /
   About: /about
   Links: /links
-# Sidebar social media
+  Sign: /clockin
+  # Sidebar social media
 # Try to sort by changing the order of the keys
 sns:
   # `email` will fallback to `profile.email` if not specified
@@ -93,10 +91,10 @@ page:
   # toc: false
 
   # Display reward, default to `false`
-  reward: true
+  # reward: true
 
   # Display copyright notice, default to `false`
-  copyright: true
+  # copyright: true
 
 
 # Post
@@ -148,21 +146,27 @@ toc:
 reward:
   # Text which shows at the top.
   # text: Buy me a cup of coffee ☕.
-
+  text: "写东西这么累，给我买瓶肥宅快乐水8🥂。可以通过后两种手段免费支持我哦。"
   # Payment Methods
   #  - qrcode: url of the qrcode image
   #    url: link of the payment
   #    text: link text of the url
   # qrcode and url must be set at least one
-  # methods:
-  #   - name: wechat
-  #     qrcode:
+  methods:
+    - name: wechat
+      qrcode: http://prgs9av8q.bkt.clouddn.com/qrwc.png
   #     url:
-  #     text:
-  #   - name: alipay
-  #     qrcode:
+      text: 使用微信支付
+    - name: alipay
+      qrcode: http://prgs9av8q.bkt.clouddn.com/zfb.jpg
   #     url:
-  #     text:
+      text: 使用支付宝支付
+    - name: alipay_free
+      qrcode: http://prgs9av8q.bkt.clouddn.com/zfbhb.jpg
+      text: 支付宝免费扫红包
+    - name: google_ad
+      text: 收看Google广告支持我(暂未开放)
+      url: http://baidu.com
   #   - name: paypal
   #     qrcode:
   #     url:
@@ -307,7 +311,6 @@ plugins:
        window.MathJax && MathJax.Hub && MathJax.Hub.Queue(['Typeset', MathJax.Hub, document.querySelector('main')]);
       </script>
     mathjax: true
-
 #- hexo-renderer-mathjax
     
   # - position:

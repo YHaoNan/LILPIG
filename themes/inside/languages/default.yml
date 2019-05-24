@@ -17,6 +17,8 @@ reward:
   wechat: WeChat
   alipay: 支
   bitcoin: Bitcoin
+  alipay_free: 红
+  google_ad: AD
 
 comments:
   load: Load %s
