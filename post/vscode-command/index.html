@@ -23,24 +23,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 <link rel="canonical" href="http://yoursite.com/post/vscode-command/">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
-<meta name="description" content="这回我们来研究下VSCode扩展开发中一个非常重要的东西，Command。 VSCode之所以这么强大，都是因为Command在工作，虽然你可能没有意识到它的存在，但是它确确实实的已经为你服务了无数回。 当我们每次使用Ctrl+/在当前行加入一个注释，当我们每次为代码生成文档，甚至我们每次打开一个文件夹或者文件，背后都是Command在工作。VSCode提供了大量的内建Command支撑它更好的工">
+<meta name="description" content="这回我们来研究下VSCode扩展开发中一个非常重要的东西，Command。 首先需要你有一些TypeScript的基础，或者JavaScript，认识Json文件，然后就啥也不需要了。 VSCode之所以这么强大，都是因为Command在工作，虽然你可能没有意识到它的存在，但是它确确实实的已经为你服务了无数回。 当我们每次使用Ctrl+/在当前行加入一个注释，当我们每次为代码生成文档，甚至我们每次">
 <meta name="keywords" content="vscode,editor">
 <meta property="og:type" content="website">
 <meta property="og:title" content="VSCode扩展开发 - Command">
 <meta property="og:url" content="http://yoursite.com/post/vscode-command/index.html">
 <meta property="og:site_name" content="LIP PIG 的博客">
-<meta property="og:description" content="这回我们来研究下VSCode扩展开发中一个非常重要的东西，Command。 VSCode之所以这么强大，都是因为Command在工作，虽然你可能没有意识到它的存在，但是它确确实实的已经为你服务了无数回。 当我们每次使用Ctrl+/在当前行加入一个注释，当我们每次为代码生成文档，甚至我们每次打开一个文件夹或者文件，背后都是Command在工作。VSCode提供了大量的内建Command支撑它更好的工">
+<meta property="og:description" content="这回我们来研究下VSCode扩展开发中一个非常重要的东西，Command。 首先需要你有一些TypeScript的基础，或者JavaScript，认识Json文件，然后就啥也不需要了。 VSCode之所以这么强大，都是因为Command在工作，虽然你可能没有意识到它的存在，但是它确确实实的已经为你服务了无数回。 当我们每次使用Ctrl+/在当前行加入一个注释，当我们每次为代码生成文档，甚至我们每次">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://prgs9av8q.bkt.clouddn.com/3157f860f0db1818.jpg">
-<meta property="og:updated_time" content="2019-05-30T09:34:16.756Z">
+<meta property="og:updated_time" content="2019-05-31T08:18:25.957Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="VSCode扩展开发 - Command">
-<meta name="twitter:description" content="这回我们来研究下VSCode扩展开发中一个非常重要的东西，Command。 VSCode之所以这么强大，都是因为Command在工作，虽然你可能没有意识到它的存在，但是它确确实实的已经为你服务了无数回。 当我们每次使用Ctrl+/在当前行加入一个注释，当我们每次为代码生成文档，甚至我们每次打开一个文件夹或者文件，背后都是Command在工作。VSCode提供了大量的内建Command支撑它更好的工">
+<meta name="twitter:description" content="这回我们来研究下VSCode扩展开发中一个非常重要的东西，Command。 首先需要你有一些TypeScript的基础，或者JavaScript，认识Json文件，然后就啥也不需要了。 VSCode之所以这么强大，都是因为Command在工作，虽然你可能没有意识到它的存在，但是它确确实实的已经为你服务了无数回。 当我们每次使用Ctrl+/在当前行加入一个注释，当我们每次为代码生成文档，甚至我们每次">
 <meta name="twitter:image" content="http://prgs9av8q.bkt.clouddn.com/3157f860f0db1818.jpg">
 <link rel="stylesheet" href="/fonts.b9b22ef890c930ac7a13.css">
 <link rel="stylesheet" href="/styles.f3ea1e219d757e5d89f5.css">
 <link rel="stylesheet" href="/theme.b7d02d8e322273ca38f7.css">
-<script src="/config.df4da52a4185bc0d9078.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<script src="/config.322e01d3d631263a6c2a.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 <body>
        
