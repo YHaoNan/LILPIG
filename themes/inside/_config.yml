@@ -79,8 +79,7 @@ footer:
   # Custom text.
   # custom: Hosted by <a target="_blank" rel="noopener"
   #   href="https://pages.coding.me"><b>Coding Pages</b></a>
-  custom: Written by LIL PIG FROM LEOIO<br>Theme is provided by <a href="https://github.com/elmorec/hexo-theme-inside">Inside.</a>
-
+  custom: Written by LIL PIG FROM LEOIO<br>Theme is provided by <a href="https://github.com/elmorec/hexo-theme-inside">Inside.</a><br>Viewer · <span id="busuanzi_value_site_pv"></span>
 # ---------------------------------------------------------------
 # Content
 # ---------------------------------------------------------------
@@ -102,13 +101,14 @@ post:
   # per_page: 10
 
   # Display Table of content, default to `true`
-  # toc: false
+  toc: true
 
   # Display reward, default to `false`
   reward: true
 
   # Display copyright notice, default to `false`
   copyright: true
+  
 
 # Archive
 archive:
@@ -165,8 +165,8 @@ reward:
       qrcode: http://prgs9av8q.bkt.clouddn.com/zfbhb.jpg
       text: 支付宝免费扫红包
     - name: google_ad
-      text: 收看Google广告支持我(暂未开放)
-      url: http://baidu.com
+      text: 收看Google广告支持我
+      url: http://lilpig.site/watchad
   #   - name: paypal
   #     qrcode:
   #     url:
@@ -315,3 +315,27 @@ plugins:
     
   # - position:
   #   template:
+search:
+  # 在页面右下角的 FAB 按钮里显示快捷搜索入口
+  fab: true
+
+  # 额外生成 search 页面，可配置在 sidebar 导航，如 `Search: /search`
+  page: true
+
+  # 以上两个入口必须至少设置一个，否则视为无效配置
+
+  # 本地搜索，即生成本地 json 文件
+  adapter:
+    # json 数据的范围，数组
+    range:
+      - post
+      - page
+
+    # json 数据的条目限制
+    # 假如 `limit:1000`，同时有 800 篇 post，800 篇 page，则最终生成的数据包含：
+    # 800 篇 post，200 篇 page
+    # 缺省值 `10000`
+    limit: 10000
+
+    # 搜索结果分页大小，缺省值 `10`
+    per_page: 5
