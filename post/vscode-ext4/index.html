@@ -23,24 +23,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 <link rel="canonical" href="http://yoursite.com/post/vscode-ext4/">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
-<meta name="description" content="学习目标经过本章，你会了解到如何使用VSCode API操作OutputChannel，以及如何构建一个类似Emmet的智能代码生成器与一些Snippets方面的内容。 开篇寒暄我们平常使用编辑器，最常用到的两个东西就是控制台和编辑器，开发插件的时候我们也有大部分需求是要操作它们的。所以了解如何操作它们是非常重要的一件事。 并且VSCode面向插件提供了非常多的好用的API，这些API几乎囊括了V">
+<meta name="description" content="学习目标本章通过一个小例子，对如何使用VSCode API操作OutputChannel，如何构建一个类似Emmet的智能代码生成器和一些Snippets方面的内容进行了讲解。 开篇寒暄我们平常使用编辑器，最常用到的两个东西就是控制台和编辑器，开发插件的时候我们也有大部分需求是要操作它们的。所以了解如何操作它们是非常重要的一件事。 OutputChannelDebug的时候，如果逻辑不是很复杂，不">
 <meta name="keywords" content="vscode,editor">
 <meta property="og:type" content="website">
 <meta property="og:title" content="VSCode 扩展开发(四) Output、自动完成和Snippets">
 <meta property="og:url" content="http://yoursite.com/post/vscode-ext4/index.html">
 <meta property="og:site_name" content="LIP PIG 的博客">
-<meta property="og:description" content="学习目标经过本章，你会了解到如何使用VSCode API操作OutputChannel，以及如何构建一个类似Emmet的智能代码生成器与一些Snippets方面的内容。 开篇寒暄我们平常使用编辑器，最常用到的两个东西就是控制台和编辑器，开发插件的时候我们也有大部分需求是要操作它们的。所以了解如何操作它们是非常重要的一件事。 并且VSCode面向插件提供了非常多的好用的API，这些API几乎囊括了V">
+<meta property="og:description" content="学习目标本章通过一个小例子，对如何使用VSCode API操作OutputChannel，如何构建一个类似Emmet的智能代码生成器和一些Snippets方面的内容进行了讲解。 开篇寒暄我们平常使用编辑器，最常用到的两个东西就是控制台和编辑器，开发插件的时候我们也有大部分需求是要操作它们的。所以了解如何操作它们是非常重要的一件事。 OutputChannelDebug的时候，如果逻辑不是很复杂，不">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg">
-<meta property="og:updated_time" content="2019-06-07T02:11:11.824Z">
+<meta property="og:updated_time" content="2019-06-18T00:01:49.215Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="VSCode 扩展开发(四) Output、自动完成和Snippets">
-<meta name="twitter:description" content="学习目标经过本章，你会了解到如何使用VSCode API操作OutputChannel，以及如何构建一个类似Emmet的智能代码生成器与一些Snippets方面的内容。 开篇寒暄我们平常使用编辑器，最常用到的两个东西就是控制台和编辑器，开发插件的时候我们也有大部分需求是要操作它们的。所以了解如何操作它们是非常重要的一件事。 并且VSCode面向插件提供了非常多的好用的API，这些API几乎囊括了V">
+<meta name="twitter:description" content="学习目标本章通过一个小例子，对如何使用VSCode API操作OutputChannel，如何构建一个类似Emmet的智能代码生成器和一些Snippets方面的内容进行了讲解。 开篇寒暄我们平常使用编辑器，最常用到的两个东西就是控制台和编辑器，开发插件的时候我们也有大部分需求是要操作它们的。所以了解如何操作它们是非常重要的一件事。 OutputChannelDebug的时候，如果逻辑不是很复杂，不">
 <meta name="twitter:image" content="http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg">
 <link rel="stylesheet" href="/fonts.b9b22ef890c930ac7a13.css">
 <link rel="stylesheet" href="/styles.f3ea1e219d757e5d89f5.css">
 <link rel="stylesheet" href="/theme.b7d02d8e322273ca38f7.css">
-<script src="/config.ef1cd8081ce99ed59051.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<script src="/config.b95d7ef325e69b95f85d.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 <body>
        
