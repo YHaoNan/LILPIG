@@ -7,6 +7,7 @@ window.onload = function(){
     if(articleObj.length>0){
         console.log('hasArticle');
         var adDiv = document.createElement('div');
+        adDiv.style.height='200px';
         adDiv.innerHTML = '<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><!-- adpage --><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8637197148903783" data-ad-slot="2008916863" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>';
         articleObj[0].appendChild(adDiv);
         console.log(adDiv);
