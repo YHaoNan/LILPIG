@@ -1,6 +1,7 @@
 var articleObj = document.getElementsByTagName('article');
+console.log(articleObj);
 if (articleObj && articleObj.length>0){
-    
+
     articleObj[0].appendChild('<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><!-- adpage --><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-8637197148903783" data-ad-slot="2008916863" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script>');
 }
 
