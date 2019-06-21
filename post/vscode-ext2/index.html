@@ -23,24 +23,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 <link rel="canonical" href="http://lilpig.site/post/vscode-ext2/">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
-<meta name="description" content="学习目标本篇您将使用VSCode官方的代码生成工具生成您的第一个插件，并扩展它，且会对插件开发的流程有一个大致的了解。 环境安装PS:开发VSCode Extensions需要node环境和git，请自行安装nodejs和git。 VSCode官方给开发者提供了扩展代码生成工具，可以使用npm安装它们。1npm install -g yo generator-code 您的第一个插件刚刚我们安装了">
+<meta name="description" content="学习目标本篇您将使用VSCode官方的代码生成工具生成您的第一个插件，并扩展它，且会对插件开发的流程有一个大致的了解。 环境安装PS:开发VSCode Extensions需要node环境和git，请自行安装nodejs和git，并且保证以下命令可以运行：12git --versionnpm -v VSCode官方给开发者提供了插件项目生成工具，可以使用npm安装它们。1npm install -">
 <meta name="keywords" content="vscode,editor">
 <meta property="og:type" content="website">
 <meta property="og:title" content="VSCode 扩展开发(二) 第一个插件">
 <meta property="og:url" content="http://lilpig.site/post/vscode-ext2/index.html">
 <meta property="og:site_name" content="LIP PIG 的博客">
-<meta property="og:description" content="学习目标本篇您将使用VSCode官方的代码生成工具生成您的第一个插件，并扩展它，且会对插件开发的流程有一个大致的了解。 环境安装PS:开发VSCode Extensions需要node环境和git，请自行安装nodejs和git。 VSCode官方给开发者提供了扩展代码生成工具，可以使用npm安装它们。1npm install -g yo generator-code 您的第一个插件刚刚我们安装了">
+<meta property="og:description" content="学习目标本篇您将使用VSCode官方的代码生成工具生成您的第一个插件，并扩展它，且会对插件开发的流程有一个大致的了解。 环境安装PS:开发VSCode Extensions需要node环境和git，请自行安装nodejs和git，并且保证以下命令可以运行：12git --versionnpm -v VSCode官方给开发者提供了插件项目生成工具，可以使用npm安装它们。1npm install -">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg">
-<meta property="og:updated_time" content="2019-06-17T23:43:24.310Z">
+<meta property="og:updated_time" content="2019-06-21T08:25:20.744Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="VSCode 扩展开发(二) 第一个插件">
-<meta name="twitter:description" content="学习目标本篇您将使用VSCode官方的代码生成工具生成您的第一个插件，并扩展它，且会对插件开发的流程有一个大致的了解。 环境安装PS:开发VSCode Extensions需要node环境和git，请自行安装nodejs和git。 VSCode官方给开发者提供了扩展代码生成工具，可以使用npm安装它们。1npm install -g yo generator-code 您的第一个插件刚刚我们安装了">
+<meta name="twitter:description" content="学习目标本篇您将使用VSCode官方的代码生成工具生成您的第一个插件，并扩展它，且会对插件开发的流程有一个大致的了解。 环境安装PS:开发VSCode Extensions需要node环境和git，请自行安装nodejs和git，并且保证以下命令可以运行：12git --versionnpm -v VSCode官方给开发者提供了插件项目生成工具，可以使用npm安装它们。1npm install -">
 <meta name="twitter:image" content="http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg">
 <link rel="stylesheet" href="/fonts.b9b22ef890c930ac7a13.css">
 <link rel="stylesheet" href="/styles.f3ea1e219d757e5d89f5.css">
 <link rel="stylesheet" href="/theme.b7d02d8e322273ca38f7.css">
-<script src="/config.0b2378167cd205eef250.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+<script src="/config.ed440b1469c7a4ef368d.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </head>
 <body>
        
