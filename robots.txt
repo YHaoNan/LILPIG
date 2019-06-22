@@ -3,3 +3,6 @@ Allow: /
 Allow: /archives/
 Allow: /categories/
 Allow: /tags/
+
+Sitemap: http://lilpig.site/sitemap.xml
+Sitemap: http://lilpig.site/baidusitemap.xml
