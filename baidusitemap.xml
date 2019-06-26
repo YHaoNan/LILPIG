@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://lilpig.site/post/%E7%AE%97%E6%B3%95/algorithm-sort/</loc>
+    <lastmod>2019-06-26</lastmod>
+  </url>  <url>
     <loc>http://lilpig.site/post/VSCode/vscode-ext10/</loc>
     <lastmod>2019-06-21</lastmod>
   </url>  <url>
@@ -64,9 +67,6 @@
     <loc>http://lilpig.site/post/leetcode/leetcode-sum/</loc>
     <lastmod>2019-05-29</lastmod>
   </url>  <url>
-    <loc>http://lilpig.site/post/leetcode/leetcode-plan/</loc>
-    <lastmod>2019-05-29</lastmod>
-  </url>  <url>
     <loc>http://lilpig.site/post/leetcode/leetcode-longestsubstringwithoutrepeatingcharacters/</loc>
     <lastmod>2019-05-29</lastmod>
   </url>  <url>
@@ -77,9 +77,6 @@
     <lastmod>2019-05-29</lastmod>
   </url>  <url>
     <loc>http://lilpig.site/post/js/js-extends/</loc>
-    <lastmod>2019-05-29</lastmod>
-  </url>  <url>
-    <loc>http://lilpig.site/post/%E6%97%A5%E5%B8%B8/other-vplan/</loc>
     <lastmod>2019-05-29</lastmod>
   </url>  <url>
     <loc>http://lilpig.site/post/numpy/math-t/</loc>
