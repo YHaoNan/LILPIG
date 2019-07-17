@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="zh-Hans">
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
 <!-- hexo-inject:begin --><!-- hexo-inject:end --><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script>
     (adsbygoogle = window.adsbygoogle || []).push({
@@ -32,7 +32,7 @@
 <meta property="og:description" content="学习目标了解TreeView的用法 开篇寒暄TreeView？？听起来挺屌的，应该是个什么树形控件。 Ohh对，就是一个树形控件，它就是我们最常用的侧边栏。  其实我们很多时候都要和侧边栏打交道，VSCode提供了几个默认的侧边栏，比如文件管理、搜索、版本控制、debug、插件市场等。 我们可以通过本篇文章的学习，学会自己开发一个侧边栏工具。 Ohh，不过别高兴得太早，按照国际惯例，本节也不会写一">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg">
-<meta property="og:updated_time" content="2019-06-21T11:44:17.115Z">
+<meta property="og:updated_time" content="2019-06-21T11:44:18.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="VSCode 扩展开发(十) TreeView">
 <meta name="twitter:description" content="学习目标了解TreeView的用法 开篇寒暄TreeView？？听起来挺屌的，应该是个什么树形控件。 Ohh对，就是一个树形控件，它就是我们最常用的侧边栏。  其实我们很多时候都要和侧边栏打交道，VSCode提供了几个默认的侧边栏，比如文件管理、搜索、版本控制、debug、插件市场等。 我们可以通过本篇文章的学习，学会自己开发一个侧边栏工具。 Ohh，不过别高兴得太早，按照国际惯例，本节也不会写一">
@@ -40,8 +40,8 @@
 <link rel="stylesheet" href="/fonts.b9b22ef890c930ac7a13.css">
 <link rel="stylesheet" href="/styles.f3ea1e219d757e5d89f5.css">
 <link rel="stylesheet" href="/theme.b7d02d8e322273ca38f7.css">
-<script src="/config.85248a69bd391caeb009.js"></script>
-<script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","publisher":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"url":"http://lilpig.site","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg","description":null,"author":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"}},{"@context":"http://schema.org","@type":"Article","articleSection":"VSCode","url":"http://lilpig.site/post/VSCode/vscode-ext10/","headline":"VSCode 扩展开发(十) TreeView","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg","datePublished":"2019-06-19T01:35:54.000Z","dateModified":"2019-06-21T11:44:17.115Z","keywords":"vscode,editor","description":null,"publisher":{"@type":"Organization","name":"LIP PIG 的博客","logo":{"@type":"ImageObject","url":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"}},"author":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://lilpig.site/post/VSCode/vscode-ext10/"}}]</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+<script src="/config.77688233afbea43e4a8a.js"></script>
+<script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","publisher":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"url":"http://lilpig.site","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg","description":null,"author":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"}},{"@context":"http://schema.org","@type":"Article","articleSection":"VSCode","url":"http://lilpig.site/post/VSCode/vscode-ext10/","headline":"VSCode 扩展开发(十) TreeView","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg","datePublished":"2019-06-19T01:35:54.000Z","dateModified":"2019-06-21T11:44:18.000Z","keywords":"vscode,editor","description":null,"publisher":{"@type":"Organization","name":"LIP PIG 的博客","logo":{"@type":"ImageObject","url":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"}},"author":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://lilpig.site/post/VSCode/vscode-ext10/"}}]</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 <body>
        
 <!-- hexo-inject:begin --><!-- hexo-inject:end --><is-d2a57d>

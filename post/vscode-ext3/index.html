@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="zh-Hans">
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
 <!-- hexo-inject:begin --><!-- hexo-inject:end --><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script>
     (adsbygoogle = window.adsbygoogle || []).push({
@@ -32,7 +32,7 @@
 <meta property="og:description" content="学习目标本篇对package.json中对Command的各种设置都进行了讲解。 本篇通过一个小示例对命令是什么、如何注册、调用已有命令、命令显示位置、如何显示和绑定快捷键等知识点进行了展开。命令是VSCode扩展开发中最核心的东西，也是最基本的东西，要认真啦～ 开篇寒暄上一篇中我们已经对Command有了初步的认识，这一篇我们来详细的了解一下它。 Command是VSCode扩展开发中非常重要的">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg">
-<meta property="og:updated_time" content="2019-06-21T11:42:14.522Z">
+<meta property="og:updated_time" content="2019-06-21T11:42:14.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="VSCode 扩展开发(三) Command详解">
 <meta name="twitter:description" content="学习目标本篇对package.json中对Command的各种设置都进行了讲解。 本篇通过一个小示例对命令是什么、如何注册、调用已有命令、命令显示位置、如何显示和绑定快捷键等知识点进行了展开。命令是VSCode扩展开发中最核心的东西，也是最基本的东西，要认真啦～ 开篇寒暄上一篇中我们已经对Command有了初步的认识，这一篇我们来详细的了解一下它。 Command是VSCode扩展开发中非常重要的">
@@ -40,8 +40,8 @@
 <link rel="stylesheet" href="/fonts.b9b22ef890c930ac7a13.css">
 <link rel="stylesheet" href="/styles.f3ea1e219d757e5d89f5.css">
 <link rel="stylesheet" href="/theme.b7d02d8e322273ca38f7.css">
-<script src="/config.85248a69bd391caeb009.js"></script>
-<script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","publisher":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"url":"http://lilpig.site","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg","description":null,"author":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"}},{"@context":"http://schema.org","@type":"Article","articleSection":"VSCode","url":"http://lilpig.site/post/VSCode/vscode-ext3/","headline":"VSCode 扩展开发(三) Command详解","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg","datePublished":"2019-06-03T05:15:54.000Z","dateModified":"2019-06-21T11:42:14.522Z","keywords":"vscode,editor","description":null,"publisher":{"@type":"Organization","name":"LIP PIG 的博客","logo":{"@type":"ImageObject","url":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"}},"author":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://lilpig.site/post/VSCode/vscode-ext3/"}}]</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+<script src="/config.77688233afbea43e4a8a.js"></script>
+<script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","publisher":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"url":"http://lilpig.site","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg","description":null,"author":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"}},{"@context":"http://schema.org","@type":"Article","articleSection":"VSCode","url":"http://lilpig.site/post/VSCode/vscode-ext3/","headline":"VSCode 扩展开发(三) Command详解","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg","datePublished":"2019-06-03T05:15:54.000Z","dateModified":"2019-06-21T11:42:14.000Z","keywords":"vscode,editor","description":null,"publisher":{"@type":"Organization","name":"LIP PIG 的博客","logo":{"@type":"ImageObject","url":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"}},"author":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://lilpig.site/post/VSCode/vscode-ext3/"}}]</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 <body>
        
 <!-- hexo-inject:begin --><!-- hexo-inject:end --><is-d2a57d>

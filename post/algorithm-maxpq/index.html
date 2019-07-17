@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="zh-Hans">
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
 <!-- hexo-inject:begin --><!-- hexo-inject:end --><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script>
     (adsbygoogle = window.adsbygoogle || []).push({
@@ -32,7 +32,7 @@
 <meta property="og:description" content="优先队列是一种数据结构，不同于队列的先进先出，优先队列是最大的元素先出。这种数据结构应用场景很广泛，在很多有优先级需求的场景可以用到。 使用二叉堆或者树可以很好的实现优先队列并把插入和取出操作的时间复杂度限制在对数级别。 如果使用数组编写二叉堆，那么我们为了方便计算不用第0个空间，用第一个空间表示最大的数，也就是二叉堆的根，用k表示二叉堆中第k个节点，那么k*2和k*2+1就是它们的子节点，而k的">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg">
-<meta property="og:updated_time" content="2019-06-27T06:07:55.041Z">
+<meta property="og:updated_time" content="2019-06-27T06:07:56.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="优先队列">
 <meta name="twitter:description" content="优先队列是一种数据结构，不同于队列的先进先出，优先队列是最大的元素先出。这种数据结构应用场景很广泛，在很多有优先级需求的场景可以用到。 使用二叉堆或者树可以很好的实现优先队列并把插入和取出操作的时间复杂度限制在对数级别。 如果使用数组编写二叉堆，那么我们为了方便计算不用第0个空间，用第一个空间表示最大的数，也就是二叉堆的根，用k表示二叉堆中第k个节点，那么k*2和k*2+1就是它们的子节点，而k的">
@@ -40,8 +40,8 @@
 <link rel="stylesheet" href="/fonts.b9b22ef890c930ac7a13.css">
 <link rel="stylesheet" href="/styles.f3ea1e219d757e5d89f5.css">
 <link rel="stylesheet" href="/theme.b7d02d8e322273ca38f7.css">
-<script src="/config.85248a69bd391caeb009.js"></script>
-<script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","publisher":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"url":"http://lilpig.site","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg","description":null,"author":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"}},{"@context":"http://schema.org","@type":"Article","articleSection":"算法和数据结构","url":"http://lilpig.site/post/算法和数据结构/algorithm-maxpq/","headline":"优先队列","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg","datePublished":"2019-06-27T05:41:24.000Z","dateModified":"2019-06-27T06:07:55.041Z","keywords":"数据结构","description":null,"publisher":{"@type":"Organization","name":"LIP PIG 的博客","logo":{"@type":"ImageObject","url":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"}},"author":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://lilpig.site/post/算法和数据结构/algorithm-maxpq/"}}]</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+<script src="/config.77688233afbea43e4a8a.js"></script>
+<script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","publisher":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"url":"http://lilpig.site","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg","description":null,"author":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"}},{"@context":"http://schema.org","@type":"Article","articleSection":"算法和数据结构","url":"http://lilpig.site/post/算法和数据结构/algorithm-maxpq/","headline":"优先队列","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg","datePublished":"2019-06-27T05:41:24.000Z","dateModified":"2019-06-27T06:07:56.000Z","keywords":"数据结构","description":null,"publisher":{"@type":"Organization","name":"LIP PIG 的博客","logo":{"@type":"ImageObject","url":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"}},"author":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://lilpig.site/post/算法和数据结构/algorithm-maxpq/"}}]</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 <body>
        
 <!-- hexo-inject:begin --><!-- hexo-inject:end --><is-d2a57d>

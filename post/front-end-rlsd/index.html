@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="zh-Hans">
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
 <!-- hexo-inject:begin --><!-- hexo-inject:end --><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script>
     (adsbygoogle = window.adsbygoogle || []).push({
@@ -32,7 +32,7 @@
 <meta property="og:description" content="最近突然心血来潮学前端。。。 在研究BootStrap的时候就很好奇他这个响应式布局是怎么实现的，为什么在不同的设备上可以不借助js实现不同的效果？很迷。。。 于是我就找了找资料，并且手动实现了一个响应式布局的例子。不过我要先说一下，我前端基础很渣的，基本没咋学过，啊哈哈哈。 看下效果，因为就是练习，所以随手写了个页，比较丑：  可以看到随着屏幕的缩小文章和左侧栏从左右排列变成了上下排列，并且左边">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg">
-<meta property="og:updated_time" content="2019-06-09T02:37:09.790Z">
+<meta property="og:updated_time" content="2019-06-09T02:37:10.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="手动实现响应式布局">
 <meta name="twitter:description" content="最近突然心血来潮学前端。。。 在研究BootStrap的时候就很好奇他这个响应式布局是怎么实现的，为什么在不同的设备上可以不借助js实现不同的效果？很迷。。。 于是我就找了找资料，并且手动实现了一个响应式布局的例子。不过我要先说一下，我前端基础很渣的，基本没咋学过，啊哈哈哈。 看下效果，因为就是练习，所以随手写了个页，比较丑：  可以看到随着屏幕的缩小文章和左侧栏从左右排列变成了上下排列，并且左边">
@@ -40,8 +40,8 @@
 <link rel="stylesheet" href="/fonts.b9b22ef890c930ac7a13.css">
 <link rel="stylesheet" href="/styles.f3ea1e219d757e5d89f5.css">
 <link rel="stylesheet" href="/theme.b7d02d8e322273ca38f7.css">
-<script src="/config.85248a69bd391caeb009.js"></script>
-<script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","publisher":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"url":"http://lilpig.site","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg","description":null,"author":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"}},{"@context":"http://schema.org","@type":"Article","articleSection":"前端","url":"http://lilpig.site/post/前端/front-end-rlsd/","headline":"手动实现响应式布局","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg","datePublished":"2019-05-19T06:55:27.000Z","dateModified":"2019-06-09T02:37:09.790Z","keywords":"前端,css,html","description":null,"publisher":{"@type":"Organization","name":"LIP PIG 的博客","logo":{"@type":"ImageObject","url":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"}},"author":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://lilpig.site/post/前端/front-end-rlsd/"}}]</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+<script src="/config.77688233afbea43e4a8a.js"></script>
+<script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","publisher":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"url":"http://lilpig.site","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg","description":null,"author":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"}},{"@context":"http://schema.org","@type":"Article","articleSection":"前端","url":"http://lilpig.site/post/前端/front-end-rlsd/","headline":"手动实现响应式布局","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg","datePublished":"2019-05-19T06:55:27.000Z","dateModified":"2019-06-09T02:37:10.000Z","keywords":"前端,css,html","description":null,"publisher":{"@type":"Organization","name":"LIP PIG 的博客","logo":{"@type":"ImageObject","url":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"}},"author":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://lilpig.site/post/前端/front-end-rlsd/"}}]</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 <body>
        
 <!-- hexo-inject:begin --><!-- hexo-inject:end --><is-d2a57d>

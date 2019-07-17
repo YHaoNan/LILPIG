@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="zh-Hans">
-<head><meta name="generator" content="Hexo 3.8.0">
+<head><meta name="generator" content="Hexo 3.9.0">
 <!-- hexo-inject:begin --><!-- hexo-inject:end --><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script>
     (adsbygoogle = window.adsbygoogle || []).push({
@@ -32,7 +32,7 @@
 <meta property="og:description" content="有序符号表有序符号表能保证键的顺序。 最简单的实现符号表的方式，我们可以用一个链表实现顺序存储，然后每次插入和删除时我们遍历链表，找到合适的位置。但是这样做的时间复杂度很高，需要线性复杂度，没法完成大任务，我们希望将插入和删除操作的时间复杂度限制在对数级别，所以应该另辟蹊径。 使用两个数组实现也可以，一个存键，一个存值，而且使用数组这种有序的数据结构，我们可以通过下标访问并不相邻的值，这样就可以使">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg">
-<meta property="og:updated_time" content="2019-07-01T21:43:13.678Z">
+<meta property="og:updated_time" content="2019-07-01T21:43:14.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="BST、2-3树、红黑树和散列函数实现符号表">
 <meta name="twitter:description" content="有序符号表有序符号表能保证键的顺序。 最简单的实现符号表的方式，我们可以用一个链表实现顺序存储，然后每次插入和删除时我们遍历链表，找到合适的位置。但是这样做的时间复杂度很高，需要线性复杂度，没法完成大任务，我们希望将插入和删除操作的时间复杂度限制在对数级别，所以应该另辟蹊径。 使用两个数组实现也可以，一个存键，一个存值，而且使用数组这种有序的数据结构，我们可以通过下标访问并不相邻的值，这样就可以使">
@@ -40,8 +40,8 @@
 <link rel="stylesheet" href="/fonts.b9b22ef890c930ac7a13.css">
 <link rel="stylesheet" href="/styles.f3ea1e219d757e5d89f5.css">
 <link rel="stylesheet" href="/theme.b7d02d8e322273ca38f7.css">
-<script src="/config.85248a69bd391caeb009.js"></script>
-<script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","publisher":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"url":"http://lilpig.site","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg","description":null,"author":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"}},{"@context":"http://schema.org","@type":"Article","articleSection":"算法和数据结构","url":"http://lilpig.site/post/算法和数据结构/algorithm-table/","headline":"BST、2-3树、红黑树和散列函数实现符号表","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg","datePublished":"2019-06-29T01:56:24.000Z","dateModified":"2019-07-01T21:43:13.678Z","keywords":"数据结构","description":null,"publisher":{"@type":"Organization","name":"LIP PIG 的博客","logo":{"@type":"ImageObject","url":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"}},"author":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://lilpig.site/post/算法和数据结构/algorithm-table/"}}]</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+<script src="/config.77688233afbea43e4a8a.js"></script>
+<script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","publisher":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"url":"http://lilpig.site","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg","description":null,"author":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"}},{"@context":"http://schema.org","@type":"Article","articleSection":"算法和数据结构","url":"http://lilpig.site/post/算法和数据结构/algorithm-table/","headline":"BST、2-3树、红黑树和散列函数实现符号表","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg","datePublished":"2019-06-29T01:56:24.000Z","dateModified":"2019-07-01T21:43:14.000Z","keywords":"数据结构","description":null,"publisher":{"@type":"Organization","name":"LIP PIG 的博客","logo":{"@type":"ImageObject","url":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"}},"author":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://lilpig.site/post/算法和数据结构/algorithm-table/"}}]</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 <body>
        
 <!-- hexo-inject:begin --><!-- hexo-inject:end --><is-d2a57d>
