@@ -24,7 +24,7 @@
 <link rel="canonical" href="http://lilpig.site/post/nodejs-child-process/">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <meta name="description" content="NodeJS能保证高效的IO操作，但是在处理CPU密集型的任务时它的表现并不尽如人意，所以当处理这种任务时，我们尽量不要让Node处理，而是丢给其他的进程，然后再用Node与它通信。 执行外部命令NodeJS对子线程的操作使用child_process模块。 我们可以这样调用外部命令：123456789const exec = require(&apos;child_process&apos;).exec;//执行外">
-<meta name="keywords" content="nodjs">
+<meta name="keywords" content="nodejs">
 <meta property="og:type" content="website">
 <meta property="og:title" content="子进程以及通信-NodeJS">
 <meta property="og:url" content="http://lilpig.site/post/nodejs-child-process/index.html">
@@ -32,7 +32,7 @@
 <meta property="og:description" content="NodeJS能保证高效的IO操作，但是在处理CPU密集型的任务时它的表现并不尽如人意，所以当处理这种任务时，我们尽量不要让Node处理，而是丢给其他的进程，然后再用Node与它通信。 执行外部命令NodeJS对子线程的操作使用child_process模块。 我们可以这样调用外部命令：123456789const exec = require(&apos;child_process&apos;).exec;//执行外">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg">
-<meta property="og:updated_time" content="2019-07-17T01:37:47.974Z">
+<meta property="og:updated_time" content="2019-07-25T02:44:45.109Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="子进程以及通信-NodeJS">
 <meta name="twitter:description" content="NodeJS能保证高效的IO操作，但是在处理CPU密集型的任务时它的表现并不尽如人意，所以当处理这种任务时，我们尽量不要让Node处理，而是丢给其他的进程，然后再用Node与它通信。 执行外部命令NodeJS对子线程的操作使用child_process模块。 我们可以这样调用外部命令：123456789const exec = require(&apos;child_process&apos;).exec;//执行外">
@@ -40,8 +40,8 @@
 <link rel="stylesheet" href="/fonts.b9b22ef890c930ac7a13.css">
 <link rel="stylesheet" href="/styles.f3ea1e219d757e5d89f5.css">
 <link rel="stylesheet" href="/theme.b7d02d8e322273ca38f7.css">
-<script src="/config.7e708a1bb38afe78f326.js"></script>
-<script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","publisher":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"url":"http://lilpig.site","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg","description":null,"author":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"}},{"@context":"http://schema.org","@type":"Article","articleSection":"NodeJS","url":"http://lilpig.site/post/NodeJS/nodejs-child-process/","headline":"子进程以及通信-NodeJS","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg","datePublished":"2019-07-17T01:07:46.000Z","dateModified":"2019-07-17T01:37:47.974Z","keywords":"nodjs","description":null,"publisher":{"@type":"Organization","name":"LIP PIG 的博客","logo":{"@type":"ImageObject","url":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"}},"author":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://lilpig.site/post/NodeJS/nodejs-child-process/"}}]</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+<script src="/config.a7846d39c8b1eba0c239.js"></script>
+<script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","publisher":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"url":"http://lilpig.site","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg","description":null,"author":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"}},{"@context":"http://schema.org","@type":"Article","articleSection":"NodeJS","url":"http://lilpig.site/post/NodeJS/nodejs-child-process/","headline":"子进程以及通信-NodeJS","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg","datePublished":"2019-07-17T01:07:46.000Z","dateModified":"2019-07-25T02:44:45.109Z","keywords":"nodejs","description":null,"publisher":{"@type":"Organization","name":"LIP PIG 的博客","logo":{"@type":"ImageObject","url":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"}},"author":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://lilpig.site/post/NodeJS/nodejs-child-process/"}}]</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 <body>
        
 <!-- hexo-inject:begin --><!-- hexo-inject:end --><is-d2a57d>

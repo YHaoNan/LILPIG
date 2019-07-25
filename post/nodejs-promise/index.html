@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+<!-- hexo-inject:begin --><!-- hexo-inject:end --><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-8637197148903783",
+    enable_page_level_ads: true
+    });
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        showProcessingMessages: false,
+        messageStyle: 'none',
+        tex2jax: { inlineMath: [['$','$']], displayMath: [['$$','$$']]}
+    })
+</script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<meta charset="utf-8">
+<title>Nodejs中的异步编程 -- Promise - LIP PIG 的博客</title>
+<base href="/">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<link rel="canonical" href="http://lilpig.site/post/nodejs-promise/">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<meta name="description" content="Promise是一个用于链式编写异步代码的规范。嘶。我感觉没有async好使，不过可能各有各的好处吧！VSCode API整个都使用了Promise规范。 Promise从语义上看就是一个承诺，承诺有两种状态，一个是兑现了(resolve 解决)、一个是没有兑现(reject 拒绝)，Promise通过这两种状态控制异步操作。 一个链式操作大概是这样的：task1().then(task2).th">
+<meta name="keywords" content="nodejs,async">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Nodejs中的异步编程 -- Promise">
+<meta property="og:url" content="http://lilpig.site/post/nodejs-promise/index.html">
+<meta property="og:site_name" content="LIP PIG 的博客">
+<meta property="og:description" content="Promise是一个用于链式编写异步代码的规范。嘶。我感觉没有async好使，不过可能各有各的好处吧！VSCode API整个都使用了Promise规范。 Promise从语义上看就是一个承诺，承诺有两种状态，一个是兑现了(resolve 解决)、一个是没有兑现(reject 拒绝)，Promise通过这两种状态控制异步操作。 一个链式操作大概是这样的：task1().then(task2).th">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg">
+<meta property="og:updated_time" content="2019-07-25T07:00:37.427Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Nodejs中的异步编程 -- Promise">
+<meta name="twitter:description" content="Promise是一个用于链式编写异步代码的规范。嘶。我感觉没有async好使，不过可能各有各的好处吧！VSCode API整个都使用了Promise规范。 Promise从语义上看就是一个承诺，承诺有两种状态，一个是兑现了(resolve 解决)、一个是没有兑现(reject 拒绝)，Promise通过这两种状态控制异步操作。 一个链式操作大概是这样的：task1().then(task2).th">
+<meta name="twitter:image" content="http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg">
+<link rel="stylesheet" href="/fonts.b9b22ef890c930ac7a13.css">
+<link rel="stylesheet" href="/styles.f3ea1e219d757e5d89f5.css">
+<link rel="stylesheet" href="/theme.b7d02d8e322273ca38f7.css">
+<script src="/config.a7846d39c8b1eba0c239.js"></script>
+<script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","publisher":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"url":"http://lilpig.site","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg","description":null,"author":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"}},{"@context":"http://schema.org","@type":"Article","articleSection":"NodeJS","url":"http://lilpig.site/post/NodeJS/nodejs-promise/","headline":"Nodejs中的异步编程 -- Promise","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg","datePublished":"2019-07-25T06:33:46.000Z","dateModified":"2019-07-25T07:00:37.427Z","keywords":"nodejs,async","description":null,"publisher":{"@type":"Organization","name":"LIP PIG 的博客","logo":{"@type":"ImageObject","url":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"}},"author":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://lilpig.site/post/NodeJS/nodejs-promise/"}}]</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+<body>
+       
+<!-- hexo-inject:begin --><!-- hexo-inject:end --><is-d2a57d>
+        
+</is-d2a57d>
+
+<script src="/runtime.a5dd35324ddfd942bef1.js"></script>
+<script src="/polyfills.bd3fb034406e30e3b5dc.js"></script>
+<script src="/main.54734ab978f98119b312.zh-Hans.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+
+</html>

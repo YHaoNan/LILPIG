@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://lilpig.site/post/NodeJS/nodejs-promise/</loc>
+    <lastmod>2019-07-25</lastmod>
+  </url>  <url>
+    <loc>http://lilpig.site/post/NodeJS/nodejs-aysnc/</loc>
+    <lastmod>2019-07-25</lastmod>
+  </url>  <url>
+    <loc>http://lilpig.site/post/NodeJS/nodejs-child-process/</loc>
+    <lastmod>2019-07-25</lastmod>
+  </url>  <url>
     <loc>http://lilpig.site/post/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/thread4j-intro/</loc>
     <lastmod>2019-07-24</lastmod>
   </url>  <url>
@@ -17,9 +26,6 @@
     <lastmod>2019-07-18</lastmod>
   </url>  <url>
     <loc>http://lilpig.site/post/NodeJS/nodejs-nodetcp/</loc>
-    <lastmod>2019-07-17</lastmod>
-  </url>  <url>
-    <loc>http://lilpig.site/post/NodeJS/nodejs-child-process/</loc>
     <lastmod>2019-07-17</lastmod>
   </url>  <url>
     <loc>http://lilpig.site/post/NodeJS/nodejs-eventemitter/</loc>
