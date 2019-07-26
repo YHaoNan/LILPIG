@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://lilpig.site/post/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/thread4j-c3-obj-share/</loc>
+    <lastmod>2019-07-26</lastmod>
+  </url>  <url>
+    <loc>http://lilpig.site/post/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/thread4j-c2-basic/</loc>
+    <lastmod>2019-07-26</lastmod>
+  </url>  <url>
     <loc>http://lilpig.site/post/NodeJS/nodejs-promise/</loc>
     <lastmod>2019-07-25</lastmod>
   </url>  <url>
@@ -9,9 +15,6 @@
   </url>  <url>
     <loc>http://lilpig.site/post/NodeJS/nodejs-child-process/</loc>
     <lastmod>2019-07-25</lastmod>
-  </url>  <url>
-    <loc>http://lilpig.site/post/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/thread4j-intro/</loc>
-    <lastmod>2019-07-24</lastmod>
   </url>  <url>
     <loc>http://lilpig.site/post/%E6%97%A5%E5%B8%B8/other-skit01/</loc>
     <lastmod>2019-07-24</lastmod>
