@@ -18,7 +18,7 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <meta charset="utf-8">
-<title>（一）基本概念 —— Java多线程学习 - LIP PIG 的博客</title>
+<title>（一）基本概念 —— 《Java并发编程实战》 - LIP PIG 的博客</title>
 <base href="/">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 <link rel="canonical" href="http://lilpig.site/post/thread4j-c2-basic/">
@@ -26,22 +26,22 @@
 <meta name="description" content="一直对多线程的很多东西很模糊，以前看过一本《Java多线程设计模式》，讲了很多多线程应用程序的设计模式，感觉受益匪浅，但是当时正在准备高考，看了之后没时间实现出来，也没时间记录，现在基本全都忘了。 最近在读《Java并发编程实战》，顺便把读到的记下来，转换成自己的东西。 基本概念多线程的概念、线程和进程的区别这些内容基本上你随便打开一篇多线程相关的文章或者是书籍时都会说，我就不准备在这个地方废话了">
 <meta name="keywords" content="java,thread">
 <meta property="og:type" content="website">
-<meta property="og:title" content="（一）基本概念 —— Java多线程学习">
+<meta property="og:title" content="（一）基本概念 —— 《Java并发编程实战》">
 <meta property="og:url" content="http://lilpig.site/post/thread4j-c2-basic/index.html">
 <meta property="og:site_name" content="LIP PIG 的博客">
 <meta property="og:description" content="一直对多线程的很多东西很模糊，以前看过一本《Java多线程设计模式》，讲了很多多线程应用程序的设计模式，感觉受益匪浅，但是当时正在准备高考，看了之后没时间实现出来，也没时间记录，现在基本全都忘了。 最近在读《Java并发编程实战》，顺便把读到的记下来，转换成自己的东西。 基本概念多线程的概念、线程和进程的区别这些内容基本上你随便打开一篇多线程相关的文章或者是书籍时都会说，我就不准备在这个地方废话了">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg">
-<meta property="og:updated_time" content="2019-07-26T11:21:21.374Z">
+<meta property="og:updated_time" content="2019-07-28T03:18:21.517Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="（一）基本概念 —— Java多线程学习">
+<meta name="twitter:title" content="（一）基本概念 —— 《Java并发编程实战》">
 <meta name="twitter:description" content="一直对多线程的很多东西很模糊，以前看过一本《Java多线程设计模式》，讲了很多多线程应用程序的设计模式，感觉受益匪浅，但是当时正在准备高考，看了之后没时间实现出来，也没时间记录，现在基本全都忘了。 最近在读《Java并发编程实战》，顺便把读到的记下来，转换成自己的东西。 基本概念多线程的概念、线程和进程的区别这些内容基本上你随便打开一篇多线程相关的文章或者是书籍时都会说，我就不准备在这个地方废话了">
 <meta name="twitter:image" content="http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg">
 <link rel="stylesheet" href="/fonts.b9b22ef890c930ac7a13.css">
 <link rel="stylesheet" href="/styles.f3ea1e219d757e5d89f5.css">
 <link rel="stylesheet" href="/theme.b7d02d8e322273ca38f7.css">
-<script src="/config.31041919fca90aba30fb.js"></script>
-<script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","publisher":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"url":"http://lilpig.site","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg","description":null,"author":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"}},{"@context":"http://schema.org","@type":"Article","articleSection":"Java多线程","url":"http://lilpig.site/post/Java多线程/thread4j-c2-basic/","headline":"（一）基本概念 —— Java多线程学习","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg","datePublished":"2019-07-24T06:13:30.000Z","dateModified":"2019-07-26T11:21:21.374Z","keywords":"java,thread","description":null,"publisher":{"@type":"Organization","name":"LIP PIG 的博客","logo":{"@type":"ImageObject","url":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"}},"author":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://lilpig.site/post/Java多线程/thread4j-c2-basic/"}}]</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+<script src="/config.b30a93eed40a6d897854.js"></script>
+<script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","publisher":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"url":"http://lilpig.site","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg","description":null,"author":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"}},{"@context":"http://schema.org","@type":"Article","articleSection":"Java多线程","url":"http://lilpig.site/post/Java多线程/thread4j-c2-basic/","headline":"（一）基本概念 —— 《Java并发编程实战》","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg","datePublished":"2019-07-24T06:13:30.000Z","dateModified":"2019-07-28T03:18:21.517Z","keywords":"java,thread","description":null,"publisher":{"@type":"Organization","name":"LIP PIG 的博客","logo":{"@type":"ImageObject","url":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"}},"author":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://lilpig.site/post/Java多线程/thread4j-c2-basic/"}}]</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 <body>
        
 <!-- hexo-inject:begin --><!-- hexo-inject:end --><is-d2a57d>

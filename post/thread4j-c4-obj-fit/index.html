@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+<!-- hexo-inject:begin --><!-- hexo-inject:end --><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-8637197148903783",
+    enable_page_level_ads: true
+    });
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        showProcessingMessages: false,
+        messageStyle: 'none',
+        tex2jax: { inlineMath: [['$','$']], displayMath: [['$$','$$']]}
+    })
+</script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<meta charset="utf-8">
+<title>（三）对象的组合 —— 《Java并发编程实战》 - LIP PIG 的博客</title>
+<base href="/">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<link rel="canonical" href="http://lilpig.site/post/thread4j-c4-obj-fit/">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<meta name="description" content="设计线程安全的代码要考虑的因素太多了，我们要考虑到每一个对象的线程安全性，并且要考虑到它们组合起来时的线程安全性，好像每一个操作都要做很多的思考并且要为之付出很多保证安全的代码。这一节就是一些利用对象组合的多线程编程技巧，在保证代码优雅的前提下还能兼顾到安全性。 封闭机制我们可以通过把一个线程不安全的类封装到一个线程安全的类中并提供同步机制来保证线程的安全，比如这样做：12345678910111">
+<meta name="keywords" content="java,thread">
+<meta property="og:type" content="website">
+<meta property="og:title" content="（三）对象的组合 —— 《Java并发编程实战》">
+<meta property="og:url" content="http://lilpig.site/post/thread4j-c4-obj-fit/index.html">
+<meta property="og:site_name" content="LIP PIG 的博客">
+<meta property="og:description" content="设计线程安全的代码要考虑的因素太多了，我们要考虑到每一个对象的线程安全性，并且要考虑到它们组合起来时的线程安全性，好像每一个操作都要做很多的思考并且要为之付出很多保证安全的代码。这一节就是一些利用对象组合的多线程编程技巧，在保证代码优雅的前提下还能兼顾到安全性。 封闭机制我们可以通过把一个线程不安全的类封装到一个线程安全的类中并提供同步机制来保证线程的安全，比如这样做：12345678910111">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg">
+<meta property="og:updated_time" content="2019-07-28T05:17:46.732Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="（三）对象的组合 —— 《Java并发编程实战》">
+<meta name="twitter:description" content="设计线程安全的代码要考虑的因素太多了，我们要考虑到每一个对象的线程安全性，并且要考虑到它们组合起来时的线程安全性，好像每一个操作都要做很多的思考并且要为之付出很多保证安全的代码。这一节就是一些利用对象组合的多线程编程技巧，在保证代码优雅的前提下还能兼顾到安全性。 封闭机制我们可以通过把一个线程不安全的类封装到一个线程安全的类中并提供同步机制来保证线程的安全，比如这样做：12345678910111">
+<meta name="twitter:image" content="http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg">
+<link rel="stylesheet" href="/fonts.b9b22ef890c930ac7a13.css">
+<link rel="stylesheet" href="/styles.f3ea1e219d757e5d89f5.css">
+<link rel="stylesheet" href="/theme.b7d02d8e322273ca38f7.css">
+<script src="/config.b30a93eed40a6d897854.js"></script>
+<script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","publisher":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"url":"http://lilpig.site","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg","description":null,"author":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"}},{"@context":"http://schema.org","@type":"Article","articleSection":"Java多线程","url":"http://lilpig.site/post/Java多线程/thread4j-c4-obj-fit/","headline":"（三）对象的组合 —— 《Java并发编程实战》","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg","datePublished":"2019-07-28T03:19:30.000Z","dateModified":"2019-07-28T05:17:46.732Z","keywords":"java,thread","description":null,"publisher":{"@type":"Organization","name":"LIP PIG 的博客","logo":{"@type":"ImageObject","url":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"}},"author":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://lilpig.site/post/Java多线程/thread4j-c4-obj-fit/"}}]</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+<body>
+       
+<!-- hexo-inject:begin --><!-- hexo-inject:end --><is-d2a57d>
+        
+</is-d2a57d>
+
+<script src="/runtime.a5dd35324ddfd942bef1.js"></script>
+<script src="/polyfills.bd3fb034406e30e3b5dc.js"></script>
+<script src="/main.54734ab978f98119b312.zh-Hans.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+
+</html>
