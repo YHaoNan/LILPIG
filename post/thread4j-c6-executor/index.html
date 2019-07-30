@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+<!-- hexo-inject:begin --><!-- hexo-inject:end --><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-8637197148903783",
+    enable_page_level_ads: true
+    });
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        showProcessingMessages: false,
+        messageStyle: 'none',
+        tex2jax: { inlineMath: [['$','$']], displayMath: [['$$','$$']]}
+    })
+</script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<meta charset="utf-8">
+<title>（五）任务执行 —— 《Java并发编程实战》 - LIP PIG 的博客</title>
+<base href="/">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<link rel="canonical" href="http://lilpig.site/post/thread4j-c6-executor/">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<meta name="description" content="在高并发应用中，如果把所有任务都放在一个线程中串行执行，那么会造成阻塞，导致我们的应用看起来奇慢无比，而且没有很好的利用CPU的资源。但如果我们给每个任务都创建一个线程，无节制的创建可能还会导致我们的资源被耗尽，然后发生一些不可预测的事情，并且每次请求都创建一个Thread，并在结束后销毁它这种做法在创建和销毁对象上浪费了很多资源，还会给Java的垃圾回收器带来一定的压力。 Java给我们提供了一">
+<meta name="keywords" content="java,thread">
+<meta property="og:type" content="website">
+<meta property="og:title" content="（五）任务执行 —— 《Java并发编程实战》">
+<meta property="og:url" content="http://lilpig.site/post/thread4j-c6-executor/index.html">
+<meta property="og:site_name" content="LIP PIG 的博客">
+<meta property="og:description" content="在高并发应用中，如果把所有任务都放在一个线程中串行执行，那么会造成阻塞，导致我们的应用看起来奇慢无比，而且没有很好的利用CPU的资源。但如果我们给每个任务都创建一个线程，无节制的创建可能还会导致我们的资源被耗尽，然后发生一些不可预测的事情，并且每次请求都创建一个Thread，并在结束后销毁它这种做法在创建和销毁对象上浪费了很多资源，还会给Java的垃圾回收器带来一定的压力。 Java给我们提供了一">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg">
+<meta property="og:updated_time" content="2019-07-30T05:32:03.066Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="（五）任务执行 —— 《Java并发编程实战》">
+<meta name="twitter:description" content="在高并发应用中，如果把所有任务都放在一个线程中串行执行，那么会造成阻塞，导致我们的应用看起来奇慢无比，而且没有很好的利用CPU的资源。但如果我们给每个任务都创建一个线程，无节制的创建可能还会导致我们的资源被耗尽，然后发生一些不可预测的事情，并且每次请求都创建一个Thread，并在结束后销毁它这种做法在创建和销毁对象上浪费了很多资源，还会给Java的垃圾回收器带来一定的压力。 Java给我们提供了一">
+<meta name="twitter:image" content="http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg">
+<link rel="stylesheet" href="/fonts.b9b22ef890c930ac7a13.css">
+<link rel="stylesheet" href="/styles.f3ea1e219d757e5d89f5.css">
+<link rel="stylesheet" href="/theme.b7d02d8e322273ca38f7.css">
+<script src="/config.8d73ba34def120a1b715.js"></script>
+<script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","publisher":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"url":"http://lilpig.site","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg","description":null,"author":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"}},{"@context":"http://schema.org","@type":"Article","articleSection":"Java多线程","url":"http://lilpig.site/post/Java多线程/thread4j-c6-executor/","headline":"（五）任务执行 —— 《Java并发编程实战》","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg","datePublished":"2019-07-30T02:54:30.000Z","dateModified":"2019-07-30T05:32:03.066Z","keywords":"java,thread","description":null,"publisher":{"@type":"Organization","name":"LIP PIG 的博客","logo":{"@type":"ImageObject","url":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"}},"author":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://lilpig.site/post/Java多线程/thread4j-c6-executor/"}}]</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+<body>
+       
+<!-- hexo-inject:begin --><!-- hexo-inject:end --><is-d2a57d>
+        
+</is-d2a57d>
+
+<script src="/runtime.a5dd35324ddfd942bef1.js"></script>
+<script src="/polyfills.bd3fb034406e30e3b5dc.js"></script>
+<script src="/main.54734ab978f98119b312.zh-Hans.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+
+</html>
