@@ -18,30 +18,30 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <meta charset="utf-8">
-<title>初识Vue —— 制作 I&#39;ll tell you - LIP PIG 的博客</title>
+<title>Vue中的组件 - LIP PIG 的博客</title>
 <base href="/">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
-<link rel="canonical" href="http://lilpig.site/post/vue-exmple/">
+<link rel="canonical" href="http://lilpig.site/post/vue-component/">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <meta name="description" content="#exm{         text-align: left;     }     #exm iframe{         border: 2px #333 solid;         outline: none;         width:100%;     }     #exm button{         outline: none;         border: 2px">
 <meta name="keywords" content="js,前端,vue">
 <meta property="og:type" content="website">
-<meta property="og:title" content="初识Vue —— 制作 I&#39;ll tell you">
-<meta property="og:url" content="http://lilpig.site/post/vue-exmple/index.html">
+<meta property="og:title" content="Vue中的组件">
+<meta property="og:url" content="http://lilpig.site/post/vue-component/index.html">
 <meta property="og:site_name" content="LIP PIG 的博客">
 <meta property="og:description" content="#exm{         text-align: left;     }     #exm iframe{         border: 2px #333 solid;         outline: none;         width:100%;     }     #exm button{         outline: none;         border: 2px">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg">
-<meta property="og:updated_time" content="2019-08-02T03:09:08.390Z">
+<meta property="og:updated_time" content="2019-08-11T03:40:03.151Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="初识Vue —— 制作 I&#39;ll tell you">
+<meta name="twitter:title" content="Vue中的组件">
 <meta name="twitter:description" content="#exm{         text-align: left;     }     #exm iframe{         border: 2px #333 solid;         outline: none;         width:100%;     }     #exm button{         outline: none;         border: 2px">
 <meta name="twitter:image" content="http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg">
 <link rel="stylesheet" href="/fonts.b9b22ef890c930ac7a13.css">
 <link rel="stylesheet" href="/styles.f3ea1e219d757e5d89f5.css">
 <link rel="stylesheet" href="/theme.b7d02d8e322273ca38f7.css">
 <script src="/config.dba3a891f4764081be37.js"></script>
-<script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","publisher":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"url":"http://lilpig.site","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg","description":null,"author":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"}},{"@context":"http://schema.org","@type":"Article","articleSection":"Vue","url":"http://lilpig.site/post/Vue/vue-exmple/","headline":"初识Vue —— 制作 I'll tell you","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg","datePublished":"2019-08-02T01:34:28.000Z","dateModified":"2019-08-02T03:09:08.390Z","keywords":"js,前端,vue","description":null,"publisher":{"@type":"Organization","name":"LIP PIG 的博客","logo":{"@type":"ImageObject","url":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"}},"author":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://lilpig.site/post/Vue/vue-exmple/"}}]</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+<script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","publisher":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"url":"http://lilpig.site","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg","description":null,"author":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"}},{"@context":"http://schema.org","@type":"Article","articleSection":"Vue","url":"http://lilpig.site/post/Vue/vue-component/","headline":"Vue中的组件","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg","datePublished":"2019-08-11T00:29:48.000Z","dateModified":"2019-08-11T03:40:03.151Z","keywords":"js,前端,vue","description":null,"publisher":{"@type":"Organization","name":"LIP PIG 的博客","logo":{"@type":"ImageObject","url":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"}},"author":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://lilpig.site/post/Vue/vue-component/"}}]</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 <body>
        
 <!-- hexo-inject:begin --><!-- hexo-inject:end --><is-d2a57d>
