@@ -18,29 +18,30 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <meta charset="utf-8">
-<title>LIP PIG 的博客</title>
+<title>VIM常用技巧 - LIP PIG 的博客</title>
 <base href="/">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
 <link rel="canonical" href="http://lilpig.site/post/vim-skill/">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <meta name="description" content=".命令.命令可以重复上次的修改。 比如我们想给每一行加上一个分号：123var foo = 1var bar = &apos;a&apos;var foobar = foo + bar 我们可以使用.来操作，比如我们现在在最后一行，按A在行尾追加，之后按;添加分号。 这样我们完成了一行的操作，然后我们可以退出输入模式，并按k上移一行，然后按.，这一行的行尾也被添加了分号，重复这个输入直到为所有行添加完毕。 再看一个示">
+<meta name="keywords" content="vim">
 <meta property="og:type" content="website">
-<meta property="og:title" content="LIP PIG 的博客">
+<meta property="og:title" content="VIM常用技巧">
 <meta property="og:url" content="http://lilpig.site/post/vim-skill/index.html">
 <meta property="og:site_name" content="LIP PIG 的博客">
 <meta property="og:description" content=".命令.命令可以重复上次的修改。 比如我们想给每一行加上一个分号：123var foo = 1var bar = &apos;a&apos;var foobar = foo + bar 我们可以使用.来操作，比如我们现在在最后一行，按A在行尾追加，之后按;添加分号。 这样我们完成了一行的操作，然后我们可以退出输入模式，并按k上移一行，然后按.，这一行的行尾也被添加了分号，重复这个输入直到为所有行添加完毕。 再看一个示">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg">
-<meta property="og:updated_time" content="2019-08-18T01:18:28.850Z">
+<meta property="og:updated_time" content="2019-08-18T01:23:07.321Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LIP PIG 的博客">
+<meta name="twitter:title" content="VIM常用技巧">
 <meta name="twitter:description" content=".命令.命令可以重复上次的修改。 比如我们想给每一行加上一个分号：123var foo = 1var bar = &apos;a&apos;var foobar = foo + bar 我们可以使用.来操作，比如我们现在在最后一行，按A在行尾追加，之后按;添加分号。 这样我们完成了一行的操作，然后我们可以退出输入模式，并按k上移一行，然后按.，这一行的行尾也被添加了分号，重复这个输入直到为所有行添加完毕。 再看一个示">
 <meta name="twitter:image" content="http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg">
 <link rel="stylesheet" href="/fonts.b9b22ef890c930ac7a13.css">
 <link rel="stylesheet" href="/styles.f3ea1e219d757e5d89f5.css">
 <link rel="stylesheet" href="/theme.b7d02d8e322273ca38f7.css">
-<script src="/config.6bf356d47e8f56b84c6a.js"></script>
-<script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","publisher":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"url":"http://lilpig.site","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg","description":null,"author":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"}},{"@context":"http://schema.org","@type":"Article","articleSection":"","url":"http://lilpig.site/post/uncategorized/vim-skill/","headline":"","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg","datePublished":"2019-08-18T01:18:28.850Z","dateModified":"2019-08-18T01:18:28.850Z","keywords":"","description":null,"publisher":{"@type":"Organization","name":"LIP PIG 的博客","logo":{"@type":"ImageObject","url":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"}},"author":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://lilpig.site/post/uncategorized/vim-skill/"}}]</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+<script src="/config.5e5595ed80ac081ee8eb.js"></script>
+<script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","publisher":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"url":"http://lilpig.site","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg","description":null,"author":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"}},{"@context":"http://schema.org","@type":"Article","articleSection":"Vim","url":"http://lilpig.site/post/Vim/vim-skill/","headline":"VIM常用技巧","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg","datePublished":"2019-08-18T01:22:27.000Z","dateModified":"2019-08-18T01:23:07.321Z","keywords":"vim","description":null,"publisher":{"@type":"Organization","name":"LIP PIG 的博客","logo":{"@type":"ImageObject","url":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"}},"author":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://lilpig.site/post/Vim/vim-skill/"}}]</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 <body>
        
 <!-- hexo-inject:begin --><!-- hexo-inject:end --><is-d2a57d>
