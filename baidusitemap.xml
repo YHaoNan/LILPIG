@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://lilpig.site/post/Vim/vim-skill/</loc>
+    <lastmod>2019-08-21</lastmod>
+  </url>  <url>
     <loc>http://lilpig.site/post/vue/vue-router/</loc>
     <lastmod>2019-08-20</lastmod>
   </url>  <url>
     <loc>http://lilpig.site/post/vue/vue-webpack/</loc>
     <lastmod>2019-08-20</lastmod>
-  </url>  <url>
-    <loc>http://lilpig.site/post/Vim/vim-skill/</loc>
-    <lastmod>2019-08-19</lastmod>
   </url>  <url>
     <loc>http://lilpig.site/post/Webpack/front-end-webpack/</loc>
     <lastmod>2019-08-18</lastmod>
