@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+<!-- hexo-inject:begin --><!-- hexo-inject:end --><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+    (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-8637197148903783",
+    enable_page_level_ads: true
+    });
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        showProcessingMessages: false,
+        messageStyle: 'none',
+        tex2jax: { inlineMath: [['$','$']], displayMath: [['$$','$$']]}
+    })
+</script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<meta charset="utf-8">
+<title>cat和find - LIP PIG 的博客</title>
+<base href="/">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<link rel="canonical" href="http://lilpig.site/post/shell-commands/">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<meta name="description" content="平时开发用Ubuntu，SHELL应该是接触的最多的东西，但是一直也没系统的学习SHELL，就是靠着平时遇到需求就百度的积累。但是这样不太行，很多东西还是不会用，而且在SHELL中总会有更简单快速的解决办法，所以最近在读《Linux Shell脚本攻略》一书，顺便记个笔记。 catcat用于拼接文件或基本输入，应该说是非常常用的命令了。 对于cat，以前我只会cat xxx来查看文件内容，其实ca">
+<meta name="keywords" content="shell">
+<meta property="og:type" content="website">
+<meta property="og:title" content="cat和find">
+<meta property="og:url" content="http://lilpig.site/post/shell-commands/index.html">
+<meta property="og:site_name" content="LIP PIG 的博客">
+<meta property="og:description" content="平时开发用Ubuntu，SHELL应该是接触的最多的东西，但是一直也没系统的学习SHELL，就是靠着平时遇到需求就百度的积累。但是这样不太行，很多东西还是不会用，而且在SHELL中总会有更简单快速的解决办法，所以最近在读《Linux Shell脚本攻略》一书，顺便记个笔记。 catcat用于拼接文件或基本输入，应该说是非常常用的命令了。 对于cat，以前我只会cat xxx来查看文件内容，其实ca">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg">
+<meta property="og:updated_time" content="2019-09-13T06:07:33.230Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="cat和find">
+<meta name="twitter:description" content="平时开发用Ubuntu，SHELL应该是接触的最多的东西，但是一直也没系统的学习SHELL，就是靠着平时遇到需求就百度的积累。但是这样不太行，很多东西还是不会用，而且在SHELL中总会有更简单快速的解决办法，所以最近在读《Linux Shell脚本攻略》一书，顺便记个笔记。 catcat用于拼接文件或基本输入，应该说是非常常用的命令了。 对于cat，以前我只会cat xxx来查看文件内容，其实ca">
+<meta name="twitter:image" content="http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg">
+<link rel="stylesheet" href="/fonts.b9b22ef890c930ac7a13.css">
+<link rel="stylesheet" href="/styles.f3ea1e219d757e5d89f5.css">
+<link rel="stylesheet" href="/theme.b7d02d8e322273ca38f7.css">
+<script src="/config.e15f1821b826d085bcec.js"></script>
+<script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","publisher":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"url":"http://lilpig.site","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg","description":null,"author":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"}},{"@context":"http://schema.org","@type":"Article","articleSection":"Shell","url":"http://lilpig.site/post/Shell/shell-commands/","headline":"cat和find","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg","datePublished":"2019-09-13T04:58:27.000Z","dateModified":"2019-09-13T06:07:33.230Z","keywords":"shell","description":null,"publisher":{"@type":"Organization","name":"LIP PIG 的博客","logo":{"@type":"ImageObject","url":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"}},"author":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://lilpig.site/post/Shell/shell-commands/"}}]</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+<body>
+       
+<!-- hexo-inject:begin --><!-- hexo-inject:end --><is-d2a57d>
+        
+</is-d2a57d>
+
+<script src="/runtime.a5dd35324ddfd942bef1.js"></script>
+<script src="/polyfills.bd3fb034406e30e3b5dc.js"></script>
+<script src="/main.54734ab978f98119b312.zh-Hans.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+
+</html>
