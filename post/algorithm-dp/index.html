@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+<!-- hexo-inject:begin --><!-- hexo-inject:end --><script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        showProcessingMessages: false,
+        messageStyle: 'none',
+        tex2jax: { inlineMath: [['$','$']], displayMath: [['$$','$$']]}
+    })
+</script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<meta charset="utf-8">
+<title>动态规划 - LIP PIG 的博客</title>
+<base href="/">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<link rel="canonical" href="http://lilpig.site/post/algorithm-dp/">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<meta name="description" content="动态规划常用于寻找最优解，寻找解的个数等。它适用于处理能被分解成若干子问题的问题，动态规划通过保存每个子问题求解时的结果来解决这类问题，这有点像缓存技术。 听起来可能有些云里雾里，不过我们借鉴一个quora上的高赞回答来理解它：  Q: 如何给4岁的孩子解释动态规划 A: 在纸上写 “1+1+1+1+1+1+1+1=”“这等于几啊？” 小朋友掰手指数数中…“等于八!” 再在左边填一个”1+”“现在">
+<meta name="keywords" content="算法,动态规划">
+<meta property="og:type" content="website">
+<meta property="og:title" content="动态规划">
+<meta property="og:url" content="http://lilpig.site/post/algorithm-dp/index.html">
+<meta property="og:site_name" content="LIP PIG 的博客">
+<meta property="og:description" content="动态规划常用于寻找最优解，寻找解的个数等。它适用于处理能被分解成若干子问题的问题，动态规划通过保存每个子问题求解时的结果来解决这类问题，这有点像缓存技术。 听起来可能有些云里雾里，不过我们借鉴一个quora上的高赞回答来理解它：  Q: 如何给4岁的孩子解释动态规划 A: 在纸上写 “1+1+1+1+1+1+1+1=”“这等于几啊？” 小朋友掰手指数数中…“等于八!” 再在左边填一个”1+”“现在">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg">
+<meta property="og:updated_time" content="2020-01-23T05:09:20.865Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="动态规划">
+<meta name="twitter:description" content="动态规划常用于寻找最优解，寻找解的个数等。它适用于处理能被分解成若干子问题的问题，动态规划通过保存每个子问题求解时的结果来解决这类问题，这有点像缓存技术。 听起来可能有些云里雾里，不过我们借鉴一个quora上的高赞回答来理解它：  Q: 如何给4岁的孩子解释动态规划 A: 在纸上写 “1+1+1+1+1+1+1+1=”“这等于几啊？” 小朋友掰手指数数中…“等于八!” 再在左边填一个”1+”“现在">
+<meta name="twitter:image" content="http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg">
+<link rel="stylesheet" href="/fonts.b9b22ef890c930ac7a13.css">
+<link rel="stylesheet" href="/styles.f3ea1e219d757e5d89f5.css">
+<link rel="stylesheet" href="/theme.b7d02d8e322273ca38f7.css">
+<script src="/config.04edd108c874df81fe7a.js"></script>
+<script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","publisher":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"url":"http://lilpig.site","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg","description":null,"author":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"}},{"@context":"http://schema.org","@type":"Article","articleSection":"算法","url":"http://lilpig.site/post/算法/algorithm-dp/","headline":"动态规划","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg","datePublished":"2020-01-23T05:01:19.000Z","dateModified":"2020-01-23T05:09:20.865Z","keywords":"算法,动态规划","description":null,"publisher":{"@type":"Organization","name":"LIP PIG 的博客","logo":{"@type":"ImageObject","url":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"}},"author":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://lilpig.site/post/算法/algorithm-dp/"}}]</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+<body>
+       
+<!-- hexo-inject:begin --><!-- hexo-inject:end --><is-d2a57d>
+        
+</is-d2a57d>
+
+<script src="/runtime.a5dd35324ddfd942bef1.js"></script>
+<script src="/polyfills.bd3fb034406e30e3b5dc.js"></script>
+<script src="/main.54734ab978f98119b312.zh-Hans.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+
+</html>
