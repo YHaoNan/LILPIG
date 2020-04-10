@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+<!-- hexo-inject:begin --><!-- hexo-inject:end --><script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        showProcessingMessages: false,
+        messageStyle: 'none',
+        tex2jax: { inlineMath: [['$','$']], displayMath: [['$$','$$']]}
+    })
+</script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<meta charset="utf-8">
+<title>图算法 - LIP PIG 的博客</title>
+<base href="/">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<link rel="canonical" href="http://lilpig.site/post/algorithm-graph2/">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<meta name="description" content="之前写过一篇图的笔记，但是当时了解的还是不够深入，当时读那本算法都是递归实现的，我看的也有点懵逼。最近再看算法导论，正好看到图了，再记一遍。  本篇笔记使用Python代码实现  图可以分为有向图和无向图，区别从名字可以看出。 我们先看看图的实现方式，图有两种常见的实现方式，邻接链表和邻接矩阵。 先说邻接矩阵，邻接矩阵采用一个二维数组记录图：如1230,0,1,1,0,1,0,1,0 邻接链表采用">
+<meta name="keywords" content="图,算法,数据结构">
+<meta property="og:type" content="website">
+<meta property="og:title" content="图算法">
+<meta property="og:url" content="http://lilpig.site/post/algorithm-graph2/index.html">
+<meta property="og:site_name" content="LIP PIG 的博客">
+<meta property="og:description" content="之前写过一篇图的笔记，但是当时了解的还是不够深入，当时读那本算法都是递归实现的，我看的也有点懵逼。最近再看算法导论，正好看到图了，再记一遍。  本篇笔记使用Python代码实现  图可以分为有向图和无向图，区别从名字可以看出。 我们先看看图的实现方式，图有两种常见的实现方式，邻接链表和邻接矩阵。 先说邻接矩阵，邻接矩阵采用一个二维数组记录图：如1230,0,1,1,0,1,0,1,0 邻接链表采用">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg">
+<meta property="og:updated_time" content="2020-02-14T02:49:32.960Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="图算法">
+<meta name="twitter:description" content="之前写过一篇图的笔记，但是当时了解的还是不够深入，当时读那本算法都是递归实现的，我看的也有点懵逼。最近再看算法导论，正好看到图了，再记一遍。  本篇笔记使用Python代码实现  图可以分为有向图和无向图，区别从名字可以看出。 我们先看看图的实现方式，图有两种常见的实现方式，邻接链表和邻接矩阵。 先说邻接矩阵，邻接矩阵采用一个二维数组记录图：如1230,0,1,1,0,1,0,1,0 邻接链表采用">
+<meta name="twitter:image" content="http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg">
+<link rel="stylesheet" href="/fonts.b9b22ef890c930ac7a13.css">
+<link rel="stylesheet" href="/styles.f3ea1e219d757e5d89f5.css">
+<link rel="stylesheet" href="/theme.b7d02d8e322273ca38f7.css">
+<script src="/config.ef131ef07201865113ef.js"></script>
+<script type="application/ld+json">[{"@context":"http://schema.org","@type":"WebSite","publisher":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"url":"http://lilpig.site","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg","description":null,"author":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"}},{"@context":"http://schema.org","@type":"Article","articleSection":"数据结构","url":"http://lilpig.site/post/数据结构/算法/algorithm-graph2/","headline":"图算法","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg","datePublished":"2020-02-14T02:32:19.000Z","dateModified":"2020-02-14T02:49:32.960Z","keywords":"图,算法,数据结构","description":null,"publisher":{"@type":"Organization","name":"LIP PIG 的博客","logo":{"@type":"ImageObject","url":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"}},"author":{"@type":"Person","name":"LIL PIG","description":"活该贱命的死🐟\n","image":"http://nsimg.cn-bj.ufileos.com/3157f860f0db1818.jpg"},"inLanguage":{"@type":"Language","alternateName":"zh-Hans"},"mainEntityOfPage":{"@type":"WebPage","@id":"http://lilpig.site/post/数据结构/算法/algorithm-graph2/"}}]</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+<body>
+       
+<!-- hexo-inject:begin --><!-- hexo-inject:end --><is-d2a57d>
+        
+</is-d2a57d>
+
+<script src="/runtime.a5dd35324ddfd942bef1.js"></script>
+<script src="/polyfills.bd3fb034406e30e3b5dc.js"></script>
+<script src="/main.54734ab978f98119b312.zh-Hans.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+
+</html>
